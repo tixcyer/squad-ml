@@ -85,6 +85,20 @@
         color: #ffcc00;
         transform: scale(1.2);
       }
+      /* Pastikan galeri memiliki tinggi yang seragam dan penuh */
+      .gallery-img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Membuat foto otomatis berbentuk kotak sempurna */
+        object-fit: cover; /* Memastikan foto tidak gepeng */
+        border-radius: 8px; /* Sedikit melengkung agar estetik */
+        border: 1px solid #333;
+        transition: transform 0.3s;
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.05);
+        border-color: #ff0000;
+      }
     </style>
   </head>
   <body>
@@ -225,10 +239,10 @@
                   class="w-full border border-zinc-700 rounded mb-3"
                 />
 
-                <p class="text-[10px] text-red-600 font-bold mb-1 uppercase">
+                <p class="text-[10px] text-red-600 font-bold mb-2 uppercase">
                   User Gallery
                 </p>
-                <div class="row g-1">
+                <div class="row g-2">
                   <div class="col-4">
                     <img
                       src="https://i.pinimg.com/736x/ea/18/6f/ea186fd44322d2e1c851a9c15acd70ef.jpg"
