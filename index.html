@@ -86,13 +86,15 @@
         transform: scale(1.2);
       }
       /* Pastikan galeri memiliki tinggi yang seragam dan penuh */
+      /* Update CSS ini agar kuat di semua browser mobile */
       .gallery-img {
-        width: 100%;
-        aspect-ratio: 1 / 1; /* Membuat foto otomatis berbentuk kotak sempurna */
-        object-fit: cover; /* Memastikan foto tidak gepeng */
-        border-radius: 8px; /* Sedikit melengkung agar estetik */
+        width: 100% !important;
+        height: auto !important; /* Menghapus paksaan 85px */
+        aspect-ratio: 1 / 1 !important; /* Memaksa kotak sempurna */
+        object-fit: cover !important;
+        border-radius: 6px;
         border: 1px solid #333;
-        transition: transform 0.3s;
+        display: block;
       }
 
       .gallery-img:hover {
